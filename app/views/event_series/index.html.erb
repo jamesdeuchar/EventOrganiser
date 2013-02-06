@@ -1,0 +1,22 @@
+<h1>Listing event_series</h1>
+
+<table>
+  <tr>
+    <th>Series name</th>
+    <th>Series administrator</th>
+  </tr>
+
+<% @event_series.each do |event_series| %>
+  <tr>
+    <td><%=h event_series.series_name %></td>
+    <td><%=h event_series.series_administrator %></td>
+    <td><%= link_to 'Show', event_series %></td>
+    <td><%= link_to 'Edit', edit_event_series_path(event_series) %></td>
+    <td><%= link_to 'Destroy', event_series, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New event_series', new_event_series_path %>

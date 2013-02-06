@@ -1,0 +1,19 @@
+<% form_for(@exhibitor) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :company_name %><br />
+    <%= f.text_field :company_name %>
+  </p>
+  <p>
+    <%= f.label :company_website %><br />
+    <%= f.text_field :company_website %>
+  </p>
+  <p>
+    <%= f.label :source %><br />
+    <%= f.text_field :source %>
+  </p>
+  <p>
+    <%= f.submit 'Save' %>
+  </p>
+<% end %>

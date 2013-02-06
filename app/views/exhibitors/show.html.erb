@@ -1,0 +1,16 @@
+<p>
+  <b>Company name:</b>
+  <%=h @exhibitor.company_name %>
+</p>
+<p>
+  <b>Company website:</b>
+  <%=h @exhibitor.company_website %>
+</p>
+<p>
+  <b>Source</b>
+  <%=h @exhibitor.source %>
+</p>
+
+
+<%= link_to 'Edit', edit_exhibitor_path(@exhibitor) %> |
+<%= link_to 'Back', exhibitors_path %>

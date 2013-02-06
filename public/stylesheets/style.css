@@ -1,0 +1,90 @@
+body { padding:15px; color:#27292d; font-family:verdana, sans-serif; font-size:95%; background:white; }
+
+/* BODY TAG SETS THE ATTRIBUTES OF THE PAGE EDITOR */
+table { font-size:1em; }
+
+h1 { color:#04277d; font-size:1.7em; line-height:25px; letter-spacing:-1px; padding-bottom:4px; margin-top:0; font-weight:normal; }
+h2 { color:#04277d; font-size:1em; margin-bottom:-15px; }
+h3 { font-size:1.5em; color:#f1ae1d; font-weight:normal; margin-top:40px; }
+h4 { color:#18387E; font-size:1.4em; }
+
+a { color:#f1ae1d; text-decoration:underline; }
+a:hover { color: #fff; background-color:#000; }
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+#container {  width:960px; margin:0 auto; margin-bottom:10px; text-align:left; }
+
+#head { background:url(/images/head_back.jpg) no-repeat; height:55px; color:#fff; }
+#head p { margin-top:0; }
+#head b { color:#4bd2fe; }
+#head img { padding:3px 0 0 21px; }
+
+#head-nav { background:url(/images/menu_back.jpg) #032576; text-align:left; margin:0 0 6px 0; padding:0; color:white; clear:both; height:35px; line-height:32px; }
+/** positioning the drop-down menu **/
+#head-nav ul, #nav ul ul { text-align:left; list-style-type:none; }
+#head-nav li { display:inline; position:relative; top:0; margin-right:-3px /* fixes inline list bug */; }
+#head-nav li a { padding:6px 3px 6px 10px; text-decoration:none; border:0; margin:0 0 0 10px;   }
+#head-nav li ul { margin:0; padding:0; display:none; position:absolute; top:25px/* distance away from the main nav bar */;  }
+#head-nav li>/**/ul { top:19px /* distance away from the main nav bar for firefox */ ; }
+#head-nav ul ul { margin:0 0 0 180px /* moves second drop down away from first */; display:block; padding:0; display:none; position:absolute; top:0;  } 
+#head-nav li:hover ul ul, #nav li.over ul ul { display:none; }
+#head-nav li:hover ul, #nav li li:hover ul, #nav li.over ul, #nav li li.over ul, #nav ul li a { display:block; width:164px /* width of the drop-downs */; left:0; }
+#head-nav #active { color:#c5f098; cursor:default; }
+#head-nav li a { background:url(nav_arrow.gif) left center no-repeat; color:white;  }
+#head-nav li a:hover { background:url(nav_arrow.gif) 2px center no-repeat; color:#e6d72d; }
+#head-nav ul li a:hover, #nav ul ul li a:hover { background:#555; }
+#head-nav .head-nav_parent a { background:url(nav_parent_out.gif) #465EB9 no-repeat right; padding-right:18px; }
+#head-nav .head-nav_parent a:hover { background:url(nav_parent_over.gif) #465EB9 no-repeat right; }
+#head-nav .head-nav_child a { background:#465EB9; padding:0 8px; border-top:1px solid #7B8ED6; }
+#head-nav .head-nav_child a:hover { background:#A7B9E7; border-bottom:0; }
+#head-nav .head-nav_parent2 a { background:url(nav_parent2_out.gif) #465EB9 no-repeat right; }
+#head-nav .head-nav_parent2 a:hover { background:url(nav_parent2_over.gif) #A7B9E7 no-repeat right; }
+#head-nav .head-nav_child2 a { background:#465EB9; }
+#head-nav .head-nav_child2 a:hover { background:#A7B9E7; }
+#head-nav #active { color:#e6d72d; cursor:default; }
+
+#main { background:url(/images/pagebody_back.gif) #fff repeat-y; }
+#main_top { background:url(/images/main_top.gif)  no-repeat; height:25px; text-align:center}
+#mid_col { background:url(/images/main_top.gif) float:left; width:890px; padding-left:30px; line-height:20px; }
+#main_btm { background:url(main_top.gif)  no-repeat; height:25px; }
+
+.shout2 { font-size:1.2em; color:#fff; font-weight:bold; padding:4px 5px; background:#18387E; border:1px solid white; }
+.submit { background:#465EB9; color:white; border:0; cursor:pointer; font-weight:bold; font-size:1em; padding:2px; }
+.reset { background:#18387E; color:white; border:0; cursor:pointer; font-weight:bold; font-size:1em; padding:2px; }
+.quote { border:1px solid #C6C6C6; padding:4px; color:#465EB9; font-weight:bold; }
+.caption { font-weight:bold; background:#465EB9; float:right; width:200px; padding:10px 8px; margin:0 0 10px 10px; color:white; font-size:0.9em; }
+.custom1 { font-size:1.5em; margin-top:-18px; color:#f1ae1d; }
+.custom2 {}
+.border { border:2px solid #C6C6C6; }
+.noborder { border:0; }
+

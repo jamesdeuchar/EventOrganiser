@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  series_name: MyString
+  series_administrator: MyString
+
+two:
+  series_name: MyString
+  series_administrator: MyString

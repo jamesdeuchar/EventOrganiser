@@ -1,0 +1,13 @@
+<p>
+  <b>Series name:</b>
+  <%=h @event_series.series_name %>
+</p>
+
+<p>
+  <b>Series administrator:</b>
+  <%=h @event_series.series_administrator %>
+</p>
+
+
+<%= link_to 'Edit', edit_event_series_path(@event_series) %> |
+<%= link_to 'Back', event_series_path %>

@@ -1,0 +1,20 @@
+<h1>Editing event_series</h1>
+
+<% form_for(@event_series) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :series_name %><br />
+    <%= f.text_field :series_name %>
+  </p>
+  <p>
+    <%= f.label :series_administrator %><br />
+    <%= f.text_field :series_administrator %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @event_series %> |
+<%= link_to 'Back', event_series_path %>

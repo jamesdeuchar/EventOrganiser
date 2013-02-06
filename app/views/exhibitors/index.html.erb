@@ -1,0 +1,22 @@
+<h1>Listing exhibitors</h1>
+
+<table>
+  <tr>
+    <th>Company name</th>
+  </tr>
+
+<% @exhibitors.each do |exhibitor| %>
+  <tr>
+    <td><%=h exhibitor.company_name %></td>
+    <td><%=h exhibitor.company_website %></td>
+    <td><%=h exhibitor.source %></td>
+    <td><%= link_to 'Show', exhibitor %></td>
+    <td><%= link_to 'Edit', edit_exhibitor_path(exhibitor) %></td>
+    <td><%= link_to 'Destroy', exhibitor, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New exhibitor', new_exhibitor_path %>
