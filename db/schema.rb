@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130206175300) do
+ActiveRecord::Schema.define(:version => 20130207214511) do
 
   create_table "event_series", :force => true do |t|
     t.string   "series_name"
@@ -24,6 +24,14 @@ ActiveRecord::Schema.define(:version => 20130206175300) do
     t.string   "source"
     t.string   "created_by"
     t.string   "updated_by"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "email"
+    t.string   "password_hash"
+    t.string   "password_salt"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
