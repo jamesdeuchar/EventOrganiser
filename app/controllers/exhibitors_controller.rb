@@ -3,13 +3,17 @@
 
 class ExhibitorsController < ApplicationController
 
+  helper_method :sort_column, :sort_direction
+
   before_filter :find_exhibitor,
     :only => [:show, :edit, :update, :destroy]
 
   # GET /exhibitors
   # GET /exhibitors.xml
   def index
-    @exhibitors = Exhibitor.all
+    @exhibitors = Exhibitor.all(:order => sort_column + " " + sort_direction)
+    #@exhibitors = Exhibitor.order(sort_column + " " + sort_direction)
+    #@exhibitors = Exhibitor.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -86,7 +90,17 @@ class ExhibitorsController < ApplicationController
   end
 
   private
+
     def find_exhibitor
       @exhibitor = Exhibitor.find(params[:id])
     end
+
+    def sort_column
+      Exhibitor.column_names.include?(params[:sort]) ? params[:sort] : "company_name"
+    end
+  
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+    end
+
 end

@@ -1,0 +1,156 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "event_series" [0m
+
+
+Processing EventSeriesController#create (for 0.0.0.0 at 2013-02-09 20:36:47) [POST]
+  Parameters: {"event_series"=>{}, "controller"=>"event_series", "action"=>"create"}
+### logged_in called
+### current_user called
+### User not logged in - redirecting to session new
+Redirected to http://test.host/sessions/new
+Filter chain halted as [:require_login] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/event_series?]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "event_series" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "event_series" [0m
+  [4;35;1mEventSeries Load (0.1ms)[0m   [0mSELECT * FROM "event_series" WHERE ("event_series"."id" = 980190962) [0m
+
+
+Processing EventSeriesController#destroy (for 0.0.0.0 at 2013-02-09 20:36:47) [DELETE]
+  Parameters: {"controller"=>"event_series", "id"=>"980190962", "action"=>"destroy"}
+### logged_in called
+### current_user called
+### User not logged in - redirecting to session new
+Redirected to http://test.host/sessions/new
+Filter chain halted as [:require_login] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/event_series/980190962]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "event_series" [0m
+  [4;35;1mEventSeries Load (0.2ms)[0m   [0mSELECT * FROM "event_series" WHERE ("event_series"."id" = 980190962) [0m
+
+
+Processing EventSeriesController#edit (for 0.0.0.0 at 2013-02-09 20:36:47) [GET]
+  Parameters: {"controller"=>"event_series", "id"=>"980190962", "action"=>"edit"}
+### logged_in called
+### current_user called
+### User not logged in - redirecting to session new
+Redirected to http://test.host/sessions/new
+Filter chain halted as [:require_login] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/event_series/980190962/edit]
+
+
+Processing EventSeriesController#index (for 0.0.0.0 at 2013-02-09 20:36:47) [GET]
+  Parameters: {"controller"=>"event_series", "action"=>"index"}
+### logged_in called
+### current_user called
+### User not logged in - redirecting to session new
+Redirected to http://test.host/sessions/new
+Filter chain halted as [:require_login] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/event_series]
+
+
+Processing EventSeriesController#new (for 0.0.0.0 at 2013-02-09 20:36:47) [GET]
+  Parameters: {"controller"=>"event_series", "action"=>"new"}
+### logged_in called
+### current_user called
+### User not logged in - redirecting to session new
+Redirected to http://test.host/sessions/new
+Filter chain halted as [:require_login] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/event_series/new]
+  [4;36;1mEventSeries Load (0.3ms)[0m   [0;1mSELECT * FROM "event_series" WHERE ("event_series"."id" = 980190962) [0m
+
+
+Processing EventSeriesController#show (for 0.0.0.0 at 2013-02-09 20:36:47) [GET]
+  Parameters: {"controller"=>"event_series", "id"=>"980190962", "action"=>"show"}
+### logged_in called
+### current_user called
+### User not logged in - redirecting to session new
+Redirected to http://test.host/sessions/new
+Filter chain halted as [:require_login] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/event_series/980190962]
+  [4;35;1mEventSeries Load (0.2ms)[0m   [0mSELECT * FROM "event_series" WHERE ("event_series"."id" = 980190962) [0m
+
+
+Processing EventSeriesController#update (for 0.0.0.0 at 2013-02-09 20:36:47) [PUT]
+  Parameters: {"event_series"=>{}, "controller"=>"event_series", "id"=>"980190962", "action"=>"update"}
+### logged_in called
+### current_user called
+### User not logged in - redirecting to session new
+Redirected to http://test.host/sessions/new
+Filter chain halted as [:require_login] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/event_series/980190962?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "exhibitors" [0m
+
+
+Processing ExhibitorsController#create (for 0.0.0.0 at 2013-02-09 20:36:47) [POST]
+  Parameters: {"controller"=>"exhibitors", "exhibitor"=>{}, "action"=>"create"}
+### logged_in called
+### current_user called
+### User not logged in - redirecting to session new
+Redirected to http://test.host/sessions/new
+Filter chain halted as [:require_login] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/exhibitors?]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "exhibitors" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "exhibitors" [0m
+  [4;35;1mExhibitor Load (0.1ms)[0m   [0mSELECT * FROM "exhibitors" WHERE ("exhibitors"."id" = 980190962) [0m
+
+
+Processing ExhibitorsController#destroy (for 0.0.0.0 at 2013-02-09 20:36:47) [DELETE]
+  Parameters: {"controller"=>"exhibitors", "id"=>"980190962", "action"=>"destroy"}
+### logged_in called
+### current_user called
+### User not logged in - redirecting to session new
+Redirected to http://test.host/sessions/new
+Filter chain halted as [:require_login] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/exhibitors/980190962]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "exhibitors" [0m
+  [4;35;1mExhibitor Load (0.2ms)[0m   [0mSELECT * FROM "exhibitors" WHERE ("exhibitors"."id" = 980190962) [0m
+
+
+Processing ExhibitorsController#edit (for 0.0.0.0 at 2013-02-09 20:36:47) [GET]
+  Parameters: {"controller"=>"exhibitors", "id"=>"980190962", "action"=>"edit"}
+### logged_in called
+### current_user called
+### User not logged in - redirecting to session new
+Redirected to http://test.host/sessions/new
+Filter chain halted as [:require_login] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/exhibitors/980190962/edit]
+
+
+Processing ExhibitorsController#index (for 0.0.0.0 at 2013-02-09 20:36:47) [GET]
+  Parameters: {"controller"=>"exhibitors", "action"=>"index"}
+### logged_in called
+### current_user called
+### User not logged in - redirecting to session new
+Redirected to http://test.host/sessions/new
+Filter chain halted as [:require_login] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/exhibitors]
+
+
+Processing ExhibitorsController#new (for 0.0.0.0 at 2013-02-09 20:36:47) [GET]
+  Parameters: {"controller"=>"exhibitors", "action"=>"new"}
+### logged_in called
+### current_user called
+### User not logged in - redirecting to session new
+Redirected to http://test.host/sessions/new
+Filter chain halted as [:require_login] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/exhibitors/new]
+  [4;36;1mExhibitor Load (0.2ms)[0m   [0;1mSELECT * FROM "exhibitors" WHERE ("exhibitors"."id" = 980190962) [0m
+
+
+Processing ExhibitorsController#show (for 0.0.0.0 at 2013-02-09 20:36:47) [GET]
+  Parameters: {"controller"=>"exhibitors", "id"=>"980190962", "action"=>"show"}
+### logged_in called
+### current_user called
+### User not logged in - redirecting to session new
+Redirected to http://test.host/sessions/new
+Filter chain halted as [:require_login] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/exhibitors/980190962]
+  [4;35;1mExhibitor Load (0.2ms)[0m   [0mSELECT * FROM "exhibitors" WHERE ("exhibitors"."id" = 980190962) [0m
+
+
+Processing ExhibitorsController#update (for 0.0.0.0 at 2013-02-09 20:36:47) [PUT]
+  Parameters: {"controller"=>"exhibitors", "id"=>"980190962", "exhibitor"=>{}, "action"=>"update"}
+### logged_in called
+### current_user called
+### User not logged in - redirecting to session new
+Redirected to http://test.host/sessions/new
+Filter chain halted as [:require_login] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/exhibitors/980190962?]

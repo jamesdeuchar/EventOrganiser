@@ -1,19 +1,88 @@
 <% form_for(@exhibitor) do |f| %>
   <%= f.error_messages %>
+<table width="100%">
+<tr>
+<td valign='top'>
+	<table>
+	<tr>
+	    <td><%= f.label :company_name %></td>
+	    <td><%= f.text_field :company_name, :class => "two_col_txt" %></td>
+	</tr>
+	<tr>
+	    <td><%= f.label :company_website %></td>
+	    <td><%= f.text_field :company_website, :class => "two_col_txt" %></td>
+	</tr>
+        <tr><td colspan="2"><hr width="50"/></td></tr>
+	<tr>
+	    <td><%= f.label :category %></td>
+	    <td><%= select_tag(:category, options_for_select(APP_CONFIG['exhibitor_categories']), :class => "two_col_sel") %></td>
+	</tr>
+	<tr>
+	    <td><%= f.label :rating %></td>
+	    <td><%= select_tag(:rating, options_for_select(APP_CONFIG['exhibitor_ratings']), :class => "two_col_sel") %></td>
+	</tr>
+	<tr>
+	    <td><%= f.label :source %></td>
+	    <td><%= f.text_field :source, :class => "two_col_txt" %></td>
+	</tr>
+	</table>
+</td>
+<td valign='top'>
+	<table>
+	<tr>
+	    <td><%= f.label :contact_first_name %></td>
+	    <td><%= f.text_field :contact_first_name, :class => "two_col_txt" %></td>
+	</tr>
+	<tr>
+	    <td><%= f.label :contact_last_name %></td>
+	    <td><%= f.text_field :contact_last_name, :class => "two_col_txt" %></td>
+	</tr>
+	<tr>
+	    <td><%= f.label :contact_phone_1 %></td>
+	    <td><%= f.text_field :contact_phone_1, :class => "two_col_txt" %></td>
+	</tr>
+	<tr>
+	    <td><%= f.label :contact_phone_1_type %></td>
+	    <td><%= select_tag(:contact_phone_1_type, options_for_select(APP_CONFIG['phone_types']), :class => "two_col_sel") %></td>
+	</tr>
+	<tr>
+	    <td><%= f.label :contact_phone_2 %></td>
+	    <td><%= f.text_field :contact_phone_2, :class => "two_col_txt" %></td>
+	</tr>
+	<tr>
+	    <td><%= f.label :contact_phone_2_type %></td>
+	    <td><%= select_tag(:contact_phone_2_type, options_for_select(APP_CONFIG['phone_types']), :class => "two_col_sel") %></td>
+	</tr>
+	<tr>
+	    <td><%= f.label :address_1 %></td>
+	    <td><%= f.text_field :address_1, :class => "two_col_txt" %></td>
+	</tr>
+	<tr>
+	    <td><%= f.label :address_2 %></td>
+	    <td><%= f.text_field :address_2, :class => "two_col_txt" %></td>
+	</tr>
+	<tr>
+	    <td><%= f.label :address_3 %></td>
+	    <td><%= f.text_field :address_3, :class => "two_col_txt" %></td>
+	</tr>
+	<tr>
+	    <td><%= f.label :town %></td>
+	    <td><%= f.text_field :town, :class => "two_col_txt" %></td>
+	</tr>
+	<tr>
+	    <td><%= f.label :county %></td>
+	    <td><%= f.text_field :county, :class => "two_col_txt" %></td>
+	</tr>
+	<tr>
+	    <td><%= f.label :post_code %></td>
+	    <td><%= f.text_field :post_code, :class => "two_col_txt" %></td>
+	</tr>
+	</table>
+    </td>
+</tr>
+<tr>
+    <td colspan="2" align="middle"><br/><%= f.submit 'Save exhibitor' %></td>
+</tr>
+</table>
 
-  <p>
-    <%= f.label :company_name %><br />
-    <%= f.text_field :company_name %>
-  </p>
-  <p>
-    <%= f.label :company_website %><br />
-    <%= f.text_field :company_website %>
-  </p>
-  <p>
-    <%= f.label :source %><br />
-    <%= f.text_field :source %>
-  </p>
-  <p>
-    <%= f.submit 'Save' %>
-  </p>
 <% end %>

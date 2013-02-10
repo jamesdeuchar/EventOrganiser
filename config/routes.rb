@@ -1,10 +1,13 @@
 ActionController::Routing::Routes.draw do |map|
 
-  map.resources :event_series
-  map.resources :exhibitors
-  map.resources :users
   map.resources :sessions
   map.resources :home, :only => [:index]
+  map.resources :event_series
+  map.resources :exhibitors
+
+  map.namespace :admin do |admin|
+    admin.resources :users
+  end
 
   map.login '/login',  :controller => 'sessions', :action => 'new'
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'

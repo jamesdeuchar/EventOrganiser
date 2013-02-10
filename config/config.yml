@@ -1,0 +1,20 @@
+development:
+  exhibitor_categories: 
+    Food: 1
+    Drink: 2
+    Cookery: 3
+    Misc: 4
+  exhibitor_ratings:
+    "Always welcome": 1
+    "Well received": 2
+    "Ok": 3
+    "Never again": 4
+  phone_types:
+    "Mobile": 1
+    "Home": 2
+    "Work": 3
+    "Other": 4
+
+test:
+
+production:

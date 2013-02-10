@@ -1,22 +1,28 @@
 <h1>Listing exhibitors</h1>
 
-<table>
+<table class="full_width_tbl" >
   <tr>
-    <th>Company name</th>
+    <th><%= sortable "company_name" %></th>
+    <th><%= sortable "Category" %></th>
+    <th><%= sortable "Rating" %></th>
+    <th><%= sortable "Contact" %></th>
+    <th>Phone</th>
   </tr>
 
 <% @exhibitors.each do |exhibitor| %>
-  <tr>
+  <tr class="<%= cycle('', 'alt') %>">
     <td><%=h exhibitor.company_name %></td>
-    <td><%=h exhibitor.company_website %></td>
-    <td><%=h exhibitor.source %></td>
+    <td><%=h exhibitor.category %></td>
+    <td><%=h exhibitor.rating %></td>
+    <td><%=h exhibitor.contact_name %></td>
+    <td><%=h exhibitor.contact_phone_1 %></td>
     <td><%= link_to 'Show', exhibitor %></td>
     <td><%= link_to 'Edit', edit_exhibitor_path(exhibitor) %></td>
-    <td><%= link_to 'Destroy', exhibitor, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Delete', exhibitor, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New exhibitor', new_exhibitor_path %>
+<p> <%= link_to 'New exhibitor', new_exhibitor_path %></p>
