@@ -21,8 +21,9 @@
     <td><%= link_to 'Delete', exhibitor, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
+<tr>
+   <td align="middle" colspan="8"><%= will_paginate @posts %></td>
+</tr>
 </table>
-
-<br />
-
+<br/>
 <p> <%= link_to 'New exhibitor', new_exhibitor_path %></p>

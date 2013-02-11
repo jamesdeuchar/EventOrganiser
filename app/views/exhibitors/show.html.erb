@@ -1,16 +1,87 @@
-<p>
-  <b>Company name:</b>
-  <%=h @exhibitor.company_name %>
-</p>
-<p>
-  <b>Company website:</b>
-  <%=h @exhibitor.company_website %>
-</p>
-<p>
-  <b>Source</b>
-  <%=h @exhibitor.source %>
-</p>
+<h1>Show exhibitor</h1>
 
+<table width="100%">
+<tr>
+<td valign='top'>
+	<table>
+	<tr>
+	    <td>Company name</td>
+	    <td class="show"><%= @exhibitor.company_name %></td>
+	</tr>
+	<tr>
+	    <td>Company website</td>
+	    <td class="show"><%= @exhibitor.company_website %></td>
+	</tr>
+        <tr><td colspan="2"><hr width="50"/></td></tr>
+	<tr>
+	    <td>Category</td>
+	    <td class="show"><%= @exhibitor.category %></td>
+	</tr>
+	<tr>
+	    <td>Rating</td>
+	    <td class="show"><%= @exhibitor.rating %></td>
+	</tr>
+	<tr>
+	    <td>Source</td>
+	    <td class="show"><%= @exhibitor.source %></td>
+	</tr>
+	</table>
+</td>
+<td valign='top'>
+	<table>
+	<tr>
+	    <td>Contact first name</td>
+	    <td class="show"><%= @exhibitor.contact_first_name %></td>
+	</tr>
+	<tr>
+	    <td>Contact last name</td>
+	    <td class="show"><%= @exhibitor.contact_last_name %></td>
+	</tr>
+	<tr>
+	    <td>Contact phone 1</td>
+	    <td class="show"><%= @exhibitor.contact_phone_1 %></td>
+	</tr>
+	<tr>
+	    <td>Contact phone 1 type</td>
+	    <td class="show"><%= @exhibitor.contact_phone_1_type %></td>
+	</tr>
+	<tr>
+	<tr>
+	    <td>Contact phone 2</td>
+	    <td class="show"><%= @exhibitor.contact_phone_2 %></td>
+	</tr>
+	<tr>
+	    <td>Contact phone 2 type</td>
+	    <td class="show"><%= @exhibitor.contact_phone_2_type %></td>
+	</tr>
+	<tr>
+	    <td>Address 1</td>
+	    <td class="show"><%= @exhibitor.address_1 %></td>
+	</tr>
+	<tr>
+	    <td>Address 2</td>
+	    <td class="show"><%= @exhibitor.address_2 %></td>
+	</tr>
+	<tr>
+	    <td>Address 3</td>
+	    <td class="show"><%= @exhibitor.address_3 %></td>
+	</tr>
+	<tr>
+	    <td>Town</td>
+	    <td class="show"><%= @exhibitor.town %></td>
+	</tr>
+	<tr>
+	    <td>County</td>
+	    <td class="show"><%= @exhibitor.county %></td>
+	</tr>
+	<tr>
+	    <td>Post code</td>
+	    <td class="show"><%= @exhibitor.post_code %></td>
+	</tr>
+	</table>
+    </td>
+</tr>
+</table>
 
-<%= link_to 'Edit', edit_exhibitor_path(@exhibitor) %> |
-<%= link_to 'Back', exhibitors_path %>
+<p><%= link_to 'Edit', :action => "edit", :id => @exhibitor %> | <%= link_to 'Back', exhibitors_path %></p>
+
