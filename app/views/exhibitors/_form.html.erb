@@ -15,11 +15,11 @@
         <tr><td colspan="2"><hr width="50"/></td></tr>
 	<tr>
 	    <td><%= f.label :category %></td>
-	    <td><%= select_tag(:category, options_for_select(APP_CONFIG['exhibitor_categories']), :class => "two_col_sel") %></td>
+	    <td><%= f.select(:category, options_for_select(APP_CONFIG['exhibitor_categories'], :selected => @exhibitor.category), :class => "two_col_sel") %></td>
 	</tr>
 	<tr>
 	    <td><%= f.label :rating %></td>
-	    <td><%= select_tag(:rating, options_for_select(APP_CONFIG['exhibitor_ratings']), :class => "two_col_sel") %></td>
+	    <td><%= f.select(:rating, options_for_select(APP_CONFIG['exhibitor_ratings'], :selected => @exhibitor.rating), :class => "two_col_sel") %></td>
 	</tr>
 	<tr>
 	    <td><%= f.label :source %></td>
@@ -38,12 +38,16 @@
 	    <td><%= f.text_field :contact_last_name, :class => "two_col_txt" %></td>
 	</tr>
 	<tr>
+	    <td><%= f.label :contact_email %></td>
+	    <td><%= f.text_field :contact_email, :class => "two_col_txt" %></td>
+	</tr>
+	<tr>
 	    <td><%= f.label :contact_phone_1 %></td>
 	    <td><%= f.text_field :contact_phone_1, :class => "two_col_txt" %></td>
 	</tr>
 	<tr>
 	    <td><%= f.label :contact_phone_1_type %></td>
-	    <td><%= select_tag(:contact_phone_1_type, options_for_select(APP_CONFIG['phone_types']), :class => "two_col_sel") %></td>
+	    <td><%= f.select(:contact_phone_1_type, options_for_select(APP_CONFIG['phone_types'], :selected => @exhibitor.contact_phone_1_type), :class => "two_col_sel") %></td>
 	</tr>
 	<tr>
 	    <td><%= f.label :contact_phone_2 %></td>
@@ -51,7 +55,7 @@
 	</tr>
 	<tr>
 	    <td><%= f.label :contact_phone_2_type %></td>
-	    <td><%= select_tag(:contact_phone_2_type, options_for_select(APP_CONFIG['phone_types']), :class => "two_col_sel") %></td>
+	    <td><%= f.select(:contact_phone_2_type, options_for_select(APP_CONFIG['phone_types'], :selected => @exhibitor.contact_phone_2_type), :class => "two_col_sel") %></td>
 	</tr>
 	<tr>
 	    <td><%= f.label :address_1 %></td>

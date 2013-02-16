@@ -1,10 +1,14 @@
 class ApplicationController < ActionController::Base
 
+  require 'will_paginate'
+
   before_filter :require_login
 
   helper :all 
   protect_from_forgery 
   filter_parameter_logging :password
+
+  WillPaginate.per_page = APP_CONFIG["results_per_page"]
 
   private
 
@@ -12,7 +16,7 @@ class ApplicationController < ActionController::Base
       unless logged_in?
         logger.debug "### User not logged in - redirecting to session new"
         flash[:error] = "You must be logged in to access this section"
-        redirect_to new_session_url # halts request cycle
+        redirect_to :login 
       end
     end
 

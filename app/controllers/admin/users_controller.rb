@@ -16,7 +16,7 @@ class Admin::UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to root_url, :notice => "User created!"
+      redirect_to :action => "index", :notice => "User '#{@user.name}' successfully created!"
     else
       flash[:error] = "Failed to create user"
       render "new"
@@ -28,7 +28,7 @@ class Admin::UsersController < ApplicationController
     @user.destroy
 
     respond_to do |format|
-      format.html { redirect_to(users_url) }
+      format.html { redirect_to :action => "index" }
       format.xml  { head :ok }
     end
   end

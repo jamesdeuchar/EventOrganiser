@@ -2,4 +2,9 @@
 
 <%= render :partial => "form" %>
 
-<p><%= link_to 'Show', @exhibitor %> | <%= link_to 'Back', exhibitors_path %></p>
+
+<p><%= link_to 'Show', :action => "show", :id => @exhibitor %> | 
+   <%= link_to 'Delete', @exhibitor, :confirm => 'Are you sure?', :method => :delete %> |
+   <%= link_to 'Back to list', exhibitors_path %>
+</p>
+

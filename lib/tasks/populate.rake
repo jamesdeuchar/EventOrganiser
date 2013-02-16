@@ -25,6 +25,9 @@ namespace :db do
       exhibitor.town                 = Faker::Address.city
       exhibitor.county               = 'Surrey'
       exhibitor.post_code            = 'GU7 2AS'
+      exhibitor.created_by           = 'Rake populate'
+      exhibitor.updated_by           = 'Rake populate'
+      
     end
     
   end

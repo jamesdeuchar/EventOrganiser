@@ -9,11 +9,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130210214456) do
+ActiveRecord::Schema.define(:version => 20130216080212) do
 
   create_table "event_series", :force => true do |t|
     t.string   "series_name"
     t.string   "series_administrator"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "exhibitor_categories", :force => true do |t|
+    t.string   "category"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -49,6 +55,7 @@ ActiveRecord::Schema.define(:version => 20130210214456) do
     t.string   "password_salt"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
   end
 
 end

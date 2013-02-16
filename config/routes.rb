@@ -1,10 +1,13 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :exhibitor_categories
+
 
   map.resources :sessions
   map.resources :home, :only => [:index]
   map.resources :event_series
   map.resources :exhibitors
 
+  map.resources :admin, :only => [:index]
   map.namespace :admin do |admin|
     admin.resources :users
   end

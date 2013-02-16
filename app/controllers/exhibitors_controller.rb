@@ -1,6 +1,3 @@
-#TODOs:
-# add created by and updated by data one auth is implemented
-
 class ExhibitorsController < ApplicationController
 
   helper_method :sort_column, :sort_direction
@@ -8,12 +5,8 @@ class ExhibitorsController < ApplicationController
   before_filter :find_exhibitor,
     :only => [:show, :edit, :update, :destroy]
 
-  # GET /exhibitors
-  # GET /exhibitors.xml
   def index
-    @exhibitors = Exhibitor.all(:order => sort_column + " " + sort_direction)
-    #@exhibitors = Exhibitor.order(sort_column + " " + sort_direction)
-    #@exhibitors = Exhibitor.all
+    @exhibitors = Exhibitor.all(:order => sort_column + " " + sort_direction).paginate(:page => params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -21,8 +14,6 @@ class ExhibitorsController < ApplicationController
     end
   end
 
-  # GET /exhibitors/1
-  # GET /exhibitors/1.xml
   def show
 
     respond_to do |format|
@@ -31,8 +22,6 @@ class ExhibitorsController < ApplicationController
     end
   end
 
-  # GET /exhibitors/new
-  # GET /exhibitors/new.xml
   def new
     @exhibitor = Exhibitor.new
 
@@ -42,15 +31,13 @@ class ExhibitorsController < ApplicationController
     end
   end
 
-  # GET /exhibitors/1/edit
   def edit
 
   end
 
-  # POST /exhibitors
-  # POST /exhibitors.xml
   def create
     @exhibitor = Exhibitor.new(params[:exhibitor])
+    @exhibitor.created_by = @exhibitor.updated_by = current_user.name
 
     respond_to do |format|
       if @exhibitor.save
@@ -63,9 +50,9 @@ class ExhibitorsController < ApplicationController
     end
   end
 
-  # PUT /exhibitors/1
-  # PUT /exhibitors/1.xml
   def update
+
+    @exhibitor.updated_by = current_user.name
 
     respond_to do |format|
       if @exhibitor.update_attributes(params[:exhibitor])
@@ -78,8 +65,6 @@ class ExhibitorsController < ApplicationController
     end
   end
 
-  # DELETE /exhibitors/1
-  # DELETE /exhibitors/1.xml
   def destroy
     @exhibitor.destroy
 

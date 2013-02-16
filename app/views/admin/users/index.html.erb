@@ -2,17 +2,19 @@
 
 <table>
   <tr>
-    <th>Company name</th>
+    <th>Name</th>
+    <th>Email</th>
   </tr>
 
 <% @users.each do |user| %>
   <tr>
+    <td><%=h user.name %></td>
     <td><%=h user.email %></td>
-    <td><%= link_to 'Destroy', '/admin/users/destroy', :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Delete', "/admin/users/#{user.id}", :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
-<br />
-
-<%= link_to 'New user', new_admin_user_path  %>
+<p>
+   <%= link_to 'New user', new_admin_user_path %>
+</p>

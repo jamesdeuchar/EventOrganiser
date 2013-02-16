@@ -1,0 +1,6 @@
+    <table width="100%">
+    <tr>
+      <td align="left">Current user: <%= current_user.name.to_s + ' - ' + current_user.email.to_s %>
+      <td align="right"><%= link_to "Log out", :logout %></td>
+    <tr>
+    </table>

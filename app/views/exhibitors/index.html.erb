@@ -3,22 +3,18 @@
 <table class="full_width_tbl" >
   <tr>
     <th><%= sortable "company_name" %></th>
-    <th><%= sortable "Category" %></th>
-    <th><%= sortable "Rating" %></th>
-    <th><%= sortable "Contact" %></th>
-    <th>Phone</th>
+    <th><%= sortable "contact_last_name", "Contact Name" %></th>
+    <th><%= sortable "contact_email" %></th>
+    <th><%= sortable "contact_phone_1" %></th>
   </tr>
 
 <% @exhibitors.each do |exhibitor| %>
   <tr class="<%= cycle('', 'alt') %>">
-    <td><%=h exhibitor.company_name %></td>
-    <td><%=h exhibitor.category %></td>
-    <td><%=h exhibitor.rating %></td>
-    <td><%=h exhibitor.contact_name %></td>
-    <td><%=h exhibitor.contact_phone_1 %></td>
-    <td><%= link_to 'Show', exhibitor %></td>
-    <td><%= link_to 'Edit', edit_exhibitor_path(exhibitor) %></td>
-    <td><%= link_to 'Delete', exhibitor, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to_show_exhibitor exhibitor.company_name, exhibitor %></td>
+    <td><%= exhibitor.contact_name %></td>
+    <td><%= exhibitor.contact_email %></td>
+    <td><%= exhibitor.contact_phone_1 %></td>
+    <td><%= link_to image_tag("edit_icon.png", :alt => "Edit", :size => "20x20"), edit_exhibitor_path(exhibitor) %></td>
   </tr>
 <% end %>
 <tr>

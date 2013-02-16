@@ -31,7 +31,7 @@ class SessionsController < ApplicationController
   def destroy
     logger.debug "### Logging user out"
     session[:user_id] = nil
-    redirect_to :action => 'new'
+    redirect_to :login
   end
 
 end
