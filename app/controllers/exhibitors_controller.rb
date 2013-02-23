@@ -6,11 +6,14 @@ class ExhibitorsController < ApplicationController
     :only => [:show, :edit, :update, :destroy]
 
   def index
-    @exhibitors = Exhibitor.all(:order => sort_column + " " + sort_direction).paginate(:page => params[:page])
+    @per_page = params[:per_page] || APP_CONFIG['results_per_page']
+    @exhibitors = Exhibitor.all(:order => sort_column + " " + sort_direction) \
+                           .paginate(:page => params[:page], :per_page => params[:per_page] )
 
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @exhibitors }
+      format.xls
     end
   end
 

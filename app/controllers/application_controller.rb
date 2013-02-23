@@ -16,6 +16,7 @@ class ApplicationController < ActionController::Base
       unless logged_in?
         logger.debug "### User not logged in - redirecting to session new"
         flash[:error] = "You must be logged in to access this section"
+        session[:return_to] = request.fullpath
         redirect_to :login 
       end
     end

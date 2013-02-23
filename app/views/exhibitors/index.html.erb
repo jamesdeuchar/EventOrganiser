@@ -1,4 +1,10 @@
-<h1>Listing exhibitors</h1>
+<table width="95%%">
+  <tr>
+    <td><h1>Listing exhibitors</h1></td>
+    <td align="right"><%= link_to 'Add new exhibitor', new_exhibitor_path %> | <%= link_to_xls_export %></td>
+  </tr>
+</table>
+    
 
 <table class="full_width_tbl" >
   <tr>
@@ -18,8 +24,10 @@
   </tr>
 <% end %>
 <tr>
-   <td align="middle" colspan="8"><%= will_paginate @posts %></td>
+   <td align="middle" colspan="5">
+      <span><%= will_paginate @exhibitors %></span>
+      <span><%= will_paginate_per_page %> per page</span>
+   </td>
 </tr>
 </table>
 <br/>
-<p> <%= link_to 'New exhibitor', new_exhibitor_path %></p>

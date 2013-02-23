@@ -17,10 +17,9 @@ class SessionsController < ApplicationController
       logger.debug "### Login details matched - creating login session"
       session[:user_id] = user.id
       flash[:notice] = "Logged in!"
-      redirect_to :controller => "home", :action => "index"
-
+      redirect_to(session[:return_to] || home_index_path) 
+      session.delete(:return_to)
     else
-
       logger.debug "### User details didn't match - login denied"
       flash[:error] = "Invalid email or password"
       render "new"

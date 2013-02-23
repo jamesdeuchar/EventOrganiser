@@ -1,0 +1,59 @@
+<h1>Listing users</h1>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Company name</th>
+    <th>Company website</th>
+    <th>Category</th>
+    <th>Rating</th>
+    <th>Source</th>
+    <th>Contact first name</th>
+    <th>Contact last name</th>
+    <th>Contact email</th>
+    <th>Contact phone 1</th>
+    <th>Contact phone 1 type</th>
+    <th>Contact phone 2</th>
+    <th>Contact phone 2 type</th>
+    <th>Address 1</th>
+    <th>Address 2</th>
+    <th>Address 3</th>
+    <th>Town</th>
+    <th>County</th>
+    <th>Postcode</th>
+    <th>Created on</th>
+    <th>Created by</th>
+    <th>Updated on</th>
+    <th>Updated by</th>
+  </tr>
+
+<% @exhibitors.each do |exhibitor| %>
+  <tr>
+    <td><%= exhibitor.id %></td>
+    <td><%= exhibitor.company_name %></td>
+    <td><%= exhibitor.company_website %></td>
+    <td><%= exhibitor.category %></td>
+    <td><%= exhibitor.rating %></td>
+    <td><%= exhibitor.source %></td>
+    <td><%= exhibitor.contact_first_name %></td>
+    <td><%= exhibitor.contact_last_name %></td>
+    <td><%= exhibitor.contact_email %></td>
+    <td><%= exhibitor.contact_phone_1 %></td>
+    <td><%= exhibitor.contact_phone_1_type %></td>
+    <td><%= exhibitor.contact_phone_2 %></td>
+    <td><%= exhibitor.contact_phone_2_type %></td>
+    <td><%= exhibitor.address_1 %></td>
+    <td><%= exhibitor.address_2 %></td>
+    <td><%= exhibitor.address_3 %></td>
+    <td><%= exhibitor.town %></td>
+    <td><%= exhibitor.county %></td>
+    <td><%= exhibitor.post_code %></td>
+    <td><%= exhibitor.created_at %></td>
+    <td><%= exhibitor.created_by %></td>
+    <td><%= exhibitor.updated_at %></td>
+    <td><%= exhibitor.updated_by %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
