@@ -1,6 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :exhibitor_categories
-
 
   map.resources :sessions
   map.resources :home, :only => [:index]

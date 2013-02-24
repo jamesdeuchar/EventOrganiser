@@ -25778,3 +25778,807 @@ Rendering exhibitors/index
 Rendered layouts/_session_nav (1.4ms)
 Rendered layouts/_head_nav (0.2ms)
 Completed in 85ms (View: 58, DB: 8) | 200 OK [http://localhost/exhibitors]
+
+
+Processing ExhibitorsController#index (for 127.0.0.1 at 2013-02-24 10:17:24) [GET]
+  Parameters: {"controller"=>"exhibitors", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mExhibitor Load (8.8ms)[0m   [0mSELECT * FROM "exhibitors" ORDER BY company_name asc[0m
+Rendering template within layouts/application
+Rendering exhibitors/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.2ms)
+Rendered layouts/_head_nav (0.2ms)
+Completed in 112ms (View: 81, DB: 10) | 200 OK [http://localhost/exhibitors]
+
+
+Processing ExhibitorsController#index (for 127.0.0.1 at 2013-02-24 11:21:26) [GET]
+  Parameters: {"controller"=>"exhibitors", "action"=>"index"}
+### logged_in called
+### current_user called
+### User not logged in - redirecting to session new
+Redirected to http://localhost:3000/login
+Filter chain halted as [:require_login] rendered_or_redirected.
+Completed in 26ms (DB: 0) | 302 Found [http://localhost/exhibitors]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2013-02-24 11:21:26) [GET]
+  Parameters: {"controller"=>"sessions", "action"=>"new"}
+Rendering template within layouts/sessions
+Rendering sessions/new
+Completed in 99ms (View: 98, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2013-02-24 11:24:37) [GET]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 18ms (View: 2, DB: 1) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing ExhibitorsController#index (for 127.0.0.1 at 2013-02-24 14:13:45) [GET]
+  Parameters: {"controller"=>"exhibitors", "action"=>"index"}
+### logged_in called
+### current_user called
+### User not logged in - redirecting to session new
+Redirected to http://localhost:3000/login
+Filter chain halted as [:require_login] rendered_or_redirected.
+Completed in 60ms (DB: 0) | 302 Found [http://localhost/exhibitors]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2013-02-24 14:13:45) [GET]
+  Parameters: {"controller"=>"sessions", "action"=>"new"}
+Rendering template within layouts/sessions
+Rendering sessions/new
+Completed in 387ms (View: 377, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2013-02-24 14:20:09) [GET]
+  Parameters: {"controller"=>"home", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (2.6ms)
+Rendered layouts/_head_nav (1.0ms)
+Completed in 70ms (View: 56, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2013-02-24 14:20:11) [GET]
+  Parameters: {"controller"=>"sessions", "action"=>"destroy"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+### Logging user out
+Redirected to http://localhost:3000/login
+Completed in 7ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2013-02-24 14:20:16) [GET]
+  Parameters: {"controller"=>"sessions", "action"=>"new"}
+Rendering template within layouts/sessions
+Rendering sessions/new
+Completed in 46ms (View: 45, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2013-02-24 14:20:19) [GET]
+  Parameters: {"controller"=>"sessions", "action"=>"new"}
+Rendering template within layouts/sessions
+Rendering sessions/new
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2013-02-24 14:20:21) [POST]
+  Parameters: {"commit"=>"Log in", "controller"=>"sessions", "email"=>"jamesdeuchar@gmail.com", "action"=>"create", "authenticity_token"=>"jY3zoI/4E+xqMV1GssxSB/UJboAQwh1a/iOx6XIoaCY=", "password"=>"[FILTERED]"}
+### Processing new login details
+### User authenticate
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jamesdeuchar@gmail.com') LIMIT 1[0m
+### User found & password matched
+### Login details matched - creating login session
+Redirected to http://localhost:3000/home
+Completed in 96ms (DB: 0) | 302 Found [http://localhost/sessions/create]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2013-02-24 14:20:28) [GET]
+  Parameters: {"controller"=>"home", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.7ms)
+Rendered layouts/_head_nav (0.3ms)
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing ExhibitorsController#index (for 127.0.0.1 at 2013-02-24 14:20:30) [GET]
+  Parameters: {"controller"=>"exhibitors", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mExhibitor Load (7.9ms)[0m   [0mSELECT * FROM "exhibitors" ORDER BY company_name asc[0m
+Rendering template within layouts/application
+Rendering exhibitors/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.3ms)
+Rendered layouts/_head_nav (0.2ms)
+Completed in 82ms (View: 56, DB: 8) | 200 OK [http://localhost/exhibitors]
+
+
+Processing ExhibitorsController#index to xls (for 127.0.0.1 at 2013-02-24 14:20:39) [GET]
+  Parameters: {"controller"=>"exhibitors", "action"=>"index", "format"=>"xls"}
+### logged_in called
+### current_user called
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mExhibitor Load (9.2ms)[0m   [0;1mSELECT * FROM "exhibitors" ORDER BY company_name asc[0m
+Rendering exhibitors/index
+Completed in 88ms (View: 14, DB: 9) | 200 OK [http://localhost/exhibitors.xls]
+
+
+Processing ExhibitorsController#index (for 127.0.0.1 at 2013-02-24 14:20:49) [GET]
+  Parameters: {"controller"=>"exhibitors", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mExhibitor Load (9.1ms)[0m   [0;1mSELECT * FROM "exhibitors" ORDER BY company_name asc[0m
+Rendering template within layouts/application
+Rendering exhibitors/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.2ms)
+Rendered layouts/_head_nav (0.2ms)
+Completed in 77ms (View: 49, DB: 9) | 200 OK [http://localhost/exhibitors]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2013-02-24 14:21:56) [GET]
+  Parameters: {"controller"=>"sessions", "action"=>"destroy"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+### Logging user out
+Redirected to http://localhost:3000/login
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2013-02-24 14:22:00) [GET]
+  Parameters: {"controller"=>"home", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.9ms)
+Rendered layouts/_head_nav (0.6ms)
+Completed in 66ms (View: 57, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2013-02-24 14:22:02) [GET]
+  Parameters: {"controller"=>"sessions", "action"=>"destroy"}
+### logged_in called
+### current_user called
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+### Logging user out
+Redirected to http://localhost:3000/login
+Completed in 6ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2013-02-24 14:22:04) [GET]
+  Parameters: {"controller"=>"sessions", "action"=>"new"}
+Rendering template within layouts/sessions
+Rendering sessions/new
+Completed in 53ms (View: 51, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2013-02-24 14:22:05) [POST]
+  Parameters: {"controller"=>"sessions", "commit"=>"Log in", "authenticity_token"=>"jY3zoI/4E+xqMV1GssxSB/UJboAQwh1a/iOx6XIoaCY=", "email"=>"jamesdeuchar@gmail.com", "password"=>"[FILTERED]", "action"=>"create"}
+### Processing new login details
+### User authenticate
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'jamesdeuchar@gmail.com') LIMIT 1[0m
+### User found & password matched
+### Login details matched - creating login session
+Redirected to http://localhost:3000/home
+Completed in 93ms (DB: 0) | 302 Found [http://localhost/sessions/create]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2013-02-24 14:22:09) [GET]
+  Parameters: {"controller"=>"home", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.6ms)
+Rendered layouts/_head_nav (0.3ms)
+Completed in 56ms (View: 47, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ExhibitorsController#index (for 127.0.0.1 at 2013-02-24 14:22:10) [GET]
+  Parameters: {"controller"=>"exhibitors", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mExhibitor Load (6.1ms)[0m   [0;1mSELECT * FROM "exhibitors" ORDER BY company_name asc[0m
+Rendering template within layouts/application
+Rendering exhibitors/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.5ms)
+Rendered layouts/_head_nav (0.2ms)
+Completed in 91ms (View: 64, DB: 6) | 200 OK [http://localhost/exhibitors]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2013-02-24 14:23:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.9ms)
+Rendered layouts/_head_nav (0.6ms)
+Completed in 100ms (View: 88, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2013-02-24 14:23:06) [GET]
+  Parameters: {"controller"=>"sessions", "action"=>"destroy"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+### Logging user out
+Redirected to http://localhost:3000/login
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2013-02-24 14:23:06) [GET]
+  Parameters: {"controller"=>"sessions", "action"=>"new"}
+Rendering template within layouts/sessions
+Rendering sessions/new
+Completed in 51ms (View: 49, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2013-02-24 14:23:08) [POST]
+  Parameters: {"action"=>"create", "controller"=>"sessions", "authenticity_token"=>"jY3zoI/4E+xqMV1GssxSB/UJboAQwh1a/iOx6XIoaCY=", "email"=>"jamesdeuchar@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+### Processing new login details
+### User authenticate
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jamesdeuchar@gmail.com') LIMIT 1[0m
+### User found & password matched
+### Login details matched - creating login session
+Redirected to http://localhost:3000/home
+Completed in 87ms (DB: 0) | 302 Found [http://localhost/sessions/create]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2013-02-24 14:23:08) [GET]
+  Parameters: {"controller"=>"home", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.1ms)
+Rendered layouts/_head_nav (0.2ms)
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing ExhibitorsController#index (for 127.0.0.1 at 2013-02-24 14:23:14) [GET]
+  Parameters: {"controller"=>"exhibitors", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mExhibitor Load (6.2ms)[0m   [0mSELECT * FROM "exhibitors" ORDER BY company_name asc[0m
+Rendering template within layouts/application
+Rendering exhibitors/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (42.4ms)
+Rendered layouts/_head_nav (0.2ms)
+Completed in 126ms (View: 99, DB: 6) | 200 OK [http://localhost/exhibitors]
+
+
+Processing ExhibitorsController#index to xls (for 127.0.0.1 at 2013-02-24 14:23:16) [GET]
+  Parameters: {"controller"=>"exhibitors", "action"=>"index", "format"=>"xls"}
+### logged_in called
+### current_user called
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mExhibitor Load (9.4ms)[0m   [0;1mSELECT * FROM "exhibitors" ORDER BY company_name asc[0m
+Rendering exhibitors/index
+Completed in 43ms (View: 13, DB: 10) | 200 OK [http://localhost/exhibitors.xls]
+
+
+Processing ExhibitorsController#index (for 127.0.0.1 at 2013-02-24 16:43:07) [GET]
+  Parameters: {"controller"=>"exhibitors", "action"=>"index"}
+### logged_in called
+### current_user called
+### User not logged in - redirecting to session new
+Redirected to http://localhost:3000/login
+Filter chain halted as [:require_login] rendered_or_redirected.
+Completed in 68ms (DB: 0) | 302 Found [http://localhost/exhibitors]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2013-02-24 16:43:07) [GET]
+  Parameters: {"controller"=>"sessions", "action"=>"new"}
+Rendering template within layouts/sessions
+Rendering sessions/new
+Completed in 41ms (View: 29, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing ExhibitorsController#index (for 127.0.0.1 at 2013-02-24 20:21:11) [GET]
+  Parameters: {"controller"=>"exhibitors", "action"=>"index"}
+### logged_in called
+### current_user called
+### User not logged in - redirecting to session new
+Redirected to http://localhost:3000/login
+Filter chain halted as [:require_login] rendered_or_redirected.
+Completed in 7ms (DB: 0) | 302 Found [http://localhost/exhibitors]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2013-02-24 20:21:11) [GET]
+  Parameters: {"controller"=>"sessions", "action"=>"new"}
+Rendering template within layouts/sessions
+Rendering sessions/new
+Completed in 96ms (View: 95, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2013-02-24 20:21:12) [GET]
+  Parameters: {"controller"=>"home", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (2.4ms)
+Rendered layouts/_head_nav (0.7ms)
+Completed in 74ms (View: 59, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2013-02-24 20:21:14) [GET]
+  Parameters: {"controller"=>"sessions", "action"=>"destroy"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+### Logging user out
+Redirected to http://localhost:3000/login
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2013-02-24 20:21:15) [GET]
+  Parameters: {"controller"=>"sessions", "action"=>"new"}
+Rendering template within layouts/sessions
+Rendering sessions/new
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2013-02-24 20:21:16) [GET]
+  Parameters: {"controller"=>"sessions", "action"=>"new"}
+Rendering template within layouts/sessions
+Rendering sessions/new
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2013-02-24 20:21:25) [POST]
+  Parameters: {"controller"=>"sessions", "email"=>"jamesdeuchar@gmail.com", "commit"=>"Log in", "password"=>"[FILTERED]", "action"=>"create", "authenticity_token"=>"jY3zoI/4E+xqMV1GssxSB/UJboAQwh1a/iOx6XIoaCY="}
+### Processing new login details
+### User authenticate
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jamesdeuchar@gmail.com') LIMIT 1[0m
+### User found & password matched
+### Login details matched - creating login session
+Redirected to http://localhost:3000/home
+Completed in 93ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2013-02-24 20:21:25) [GET]
+  Parameters: {"controller"=>"home", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.2ms)
+Rendered layouts/_head_nav (0.2ms)
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2013-02-24 20:33:21) [GET]
+  Parameters: {"controller"=>"home", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.5ms)
+Rendered layouts/_head_nav (0.3ms)
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2013-02-24 20:33:22) [GET]
+  Parameters: {"controller"=>"home", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.6ms)
+Rendered layouts/_head_nav (0.2ms)
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2013-02-24 20:34:24) [GET]
+  Parameters: {"controller"=>"home", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.2ms)
+Rendered layouts/_head_nav (0.2ms)
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2013-02-24 20:34:59) [GET]
+  Parameters: {"controller"=>"home", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.7ms)
+Rendered layouts/_head_nav (0.3ms)
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2013-02-24 20:36:05) [GET]
+  Parameters: {"controller"=>"home", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.1ms)
+Rendered layouts/_head_nav (0.2ms)
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2013-02-24 20:38:43) [GET]
+  Parameters: {"controller"=>"home", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.2ms)
+Rendered layouts/_head_nav (0.3ms)
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2013-02-24 20:38:44) [GET]
+  Parameters: {"controller"=>"home", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.9ms)
+Rendered layouts/_head_nav (0.2ms)
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2013-02-24 20:38:45) [GET]
+  Parameters: {"controller"=>"home", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.1ms)
+Rendered layouts/_head_nav (0.2ms)
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2013-02-24 20:39:03) [GET]
+  Parameters: {"controller"=>"home", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.7ms)
+Rendered layouts/_head_nav (0.3ms)
+Completed in 13ms (View: 4, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing ExhibitorsController#index (for 127.0.0.1 at 2013-02-24 20:39:15) [GET]
+  Parameters: {"controller"=>"exhibitors", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mExhibitor Load (9.7ms)[0m   [0mSELECT * FROM "exhibitors" ORDER BY company_name asc[0m
+Rendering template within layouts/application
+Rendering exhibitors/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.3ms)
+Rendered layouts/_head_nav (0.2ms)
+Completed in 131ms (View: 98, DB: 10) | 200 OK [http://localhost/exhibitors]
+
+
+Processing ExhibitorsController#index (for 127.0.0.1 at 2013-02-24 20:39:28) [GET]
+  Parameters: {"controller"=>"exhibitors", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mExhibitor Load (8.2ms)[0m   [0;1mSELECT * FROM "exhibitors" ORDER BY company_name asc[0m
+Rendering template within layouts/application
+Rendering exhibitors/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.2ms)
+Rendered layouts/_head_nav (0.2ms)
+Completed in 93ms (View: 63, DB: 8) | 200 OK [http://localhost/exhibitors]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2013-02-24 20:39:36) [GET]
+  Parameters: {"controller"=>"sessions", "action"=>"destroy"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+### Logging user out
+Redirected to http://localhost:3000/login
+Completed in 6ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2013-02-24 20:39:36) [GET]
+  Parameters: {"controller"=>"sessions", "action"=>"new"}
+Rendering template within layouts/sessions
+Rendering sessions/new
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2013-02-24 20:39:37) [POST]
+  Parameters: {"controller"=>"sessions", "email"=>"jamesdeuchar@gmail.com", "commit"=>"Log in", "password"=>"[FILTERED]", "action"=>"create", "authenticity_token"=>"jY3zoI/4E+xqMV1GssxSB/UJboAQwh1a/iOx6XIoaCY="}
+### Processing new login details
+### User authenticate
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jamesdeuchar@gmail.com') LIMIT 1[0m
+### User found & password matched
+### Login details matched - creating login session
+Redirected to http://localhost:3000/home
+Completed in 98ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2013-02-24 20:39:37) [GET]
+  Parameters: {"controller"=>"home", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.4ms)
+Rendered layouts/_head_nav (0.2ms)
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2013-02-24 20:40:22) [GET]
+  Parameters: {"controller"=>"home", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.1ms)
+Rendered layouts/_head_nav (0.2ms)
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2013-02-24 20:40:23) [GET]
+  Parameters: {"controller"=>"home", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.2ms)
+Rendered layouts/_head_nav (0.2ms)
+Completed in 12ms (View: 3, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2013-02-24 20:41:03) [GET]
+  Parameters: {"controller"=>"home", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.8ms)
+Rendered layouts/_head_nav (0.3ms)
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2013-02-24 20:41:09) [GET]
+  Parameters: {"controller"=>"home", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.3ms)
+Rendered layouts/_head_nav (0.2ms)
+Completed in 56ms (View: 49, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2013-02-24 20:42:09) [GET]
+  Parameters: {"controller"=>"home", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.9ms)
+Rendered layouts/_head_nav (0.3ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2013-02-24 20:51:19) [GET]
+  Parameters: {"controller"=>"home", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.2ms)
+Rendered layouts/_head_nav (0.2ms)
+Completed in 11ms (View: 3, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2013-02-24 20:51:20) [GET]
+  Parameters: {"controller"=>"sessions", "action"=>"destroy"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+### Logging user out
+Redirected to http://localhost:3000/login
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2013-02-24 20:51:21) [GET]
+  Parameters: {"controller"=>"sessions", "action"=>"new"}
+Rendering template within layouts/sessions
+Rendering sessions/new
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2013-02-24 20:51:23) [POST]
+  Parameters: {"controller"=>"sessions", "email"=>"jamesdeuchar@gmail.com", "commit"=>"Log in", "password"=>"[FILTERED]", "action"=>"create", "authenticity_token"=>"jY3zoI/4E+xqMV1GssxSB/UJboAQwh1a/iOx6XIoaCY="}
+### Processing new login details
+### User authenticate
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jamesdeuchar@gmail.com') LIMIT 1[0m
+### User found & password matched
+### Login details matched - creating login session
+Redirected to http://localhost:3000/home
+Completed in 91ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2013-02-24 20:51:23) [GET]
+  Parameters: {"controller"=>"home", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.2ms)
+Rendered layouts/_head_nav (0.2ms)
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing EventSeriesController#index (for 127.0.0.1 at 2013-02-24 20:51:25) [GET]
+  Parameters: {"controller"=>"event_series", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mEventSeries Load (0.2ms)[0m   [0mSELECT * FROM "event_series" [0m
+Rendering template within layouts/application
+Rendering event_series/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.8ms)
+Rendered layouts/_head_nav (0.2ms)
+Completed in 56ms (View: 48, DB: 0) | 200 OK [http://localhost/event_series/]
+
+
+Processing ExhibitorsController#index (for 127.0.0.1 at 2013-02-24 20:51:28) [GET]
+  Parameters: {"controller"=>"exhibitors", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mExhibitor Load (6.2ms)[0m   [0;1mSELECT * FROM "exhibitors" ORDER BY company_name asc[0m
+Rendering template within layouts/application
+Rendering exhibitors/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.4ms)
+Rendered layouts/_head_nav (0.2ms)
+Completed in 80ms (View: 55, DB: 6) | 200 OK [http://localhost/exhibitors]
+
+
+Processing ExhibitorsController#index (for 127.0.0.1 at 2013-02-24 20:55:03) [GET]
+  Parameters: {"controller"=>"exhibitors", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mExhibitor Load (6.0ms)[0m   [0mSELECT * FROM "exhibitors" ORDER BY company_name asc[0m
+Rendering template within layouts/application
+Rendering exhibitors/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.2ms)
+
+ActionView::TemplateError (undefined local variable or method `home_path' for #<ActionView::Base:0x10f954600>) on line #2 of app/views/layouts/_head_nav.html.erb:
+1:   <ul id="head-nav">
+2:     <li><%= link_to "Home", home_path %></li>
+3:     <li><a href="#">Registrations</a></li>
+4:     <li><a href="#">Events</a></li>
+5:     <li><%= link_to "Exhibitors", exhibitors_path %></li>
+
+    app/views/layouts/_head_nav.html.erb:2
+    app/views/layouts/application.html.erb:17
+    app/controllers/exhibitors_controller.rb:13:in `index'
+    /usr/local/rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/rvm/rubies/ruby-1.8.7-p370/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (89.6ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ExhibitorsController#index (for 127.0.0.1 at 2013-02-24 20:55:25) [GET]
+  Parameters: {"controller"=>"exhibitors", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mExhibitor Load (5.9ms)[0m   [0;1mSELECT * FROM "exhibitors" ORDER BY company_name asc[0m
+Rendering template within layouts/application
+Rendering exhibitors/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.2ms)
+Rendered layouts/_head_nav (0.6ms)
+Completed in 133ms (View: 109, DB: 6) | 200 OK [http://localhost/exhibitors]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2013-02-24 20:55:27) [GET]
+  Parameters: {"controller"=>"home", "action"=>"index"}
+### logged_in called
+### current_user called
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered layouts/_session_nav (1.2ms)
+Rendered layouts/_head_nav (0.2ms)
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://localhost/home]
