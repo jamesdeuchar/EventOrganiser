@@ -1,0 +1,45 @@
+<h1>Show event</h1>
+<table>
+<tr>
+    <td>Name</td>
+    <td class="show"><%= @event.name %></td>
+</tr>
+<tr>
+    <td>Date</td>
+    <td class="show"><%= @event.date.strftime("%d %B %Y")  %></td>
+</tr>
+<tr>
+    <td>Organsier</td>
+    <td class="show"><%= @event.organiser %></td>
+</tr>
+<tr>
+    <td>Venue</td>
+    <td class="show"><%= @event.venue %></td>
+</tr>
+<tr>
+    <td>Logo</td>
+    <td class="show"><%= image_tag @event.logo.url %></td>
+</tr>
+<tr><td><br/></td></tr>
+<tr>
+    <td>Created on</td>
+    <td ><%= @event.created_at %></td>
+</tr>
+<tr>
+    <td>Created by</td>
+    <td ><%= @event.created_by %></td>
+</tr>
+<tr>
+    <td>Last updated on</td>
+    <td ><%= @event.updated_at %></td>
+</tr>
+<tr>
+    <td>Last updated by</td>
+    <td ><%= @event.updated_by %></td>
+</tr>
+</table>
+
+<p><%= link_to 'Edit', :action => "edit", :id => @event %> | 
+   <%= link_to 'Delete', @event, :confirm => 'Are you sure?', :method => :delete %> |
+   <%= link_to 'Back to list', events_path %>
+</p>

@@ -1,0 +1,33 @@
+<table width="95%%">
+  <tr>
+    <td><h1>Listing events</h1></td>
+    <td align="right"><%= link_to 'Add new event', new_event_path %></td>
+  </tr>
+</table>
+    
+
+<table class="full_width_tbl" >
+  <tr>
+    <th><%= sortable "name" %></th>
+    <th><%= sortable "date" %></th>
+    <th><%= sortable "venue" %></th>
+    <th><%= sortable "organiser" %></th>
+  </tr>
+
+<% @events.each do |event| %>
+  <tr class="<%= cycle('', 'alt') %>">
+    <td><%= link_to_show_event event.name, event %></td>
+    <td><%= event.date.strftime("%d %B %Y")  %></td>
+    <td><%= event.venue %></td>
+    <td><%= event.organiser %></td>
+    <td><%= link_to image_tag("edit_icon.png", :alt => "Edit", :size => "20x20"), edit_event_path(event) %></td>
+  </tr>
+<% end %>
+<tr>
+   <td align="middle" colspan="5">
+      <span><%= will_paginate @events %></span>
+      <span><%= will_paginate_per_page %> per page</span>
+   </td>
+</tr>
+</table>
+<br/>

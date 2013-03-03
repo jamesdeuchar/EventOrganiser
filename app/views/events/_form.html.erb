@@ -1,0 +1,29 @@
+<% form_for(@event, :html => { :multipart => true }) do |f| %>
+  <%= f.error_messages %>
+<table width=60%">
+<tr>
+    <td><%= f.label :name %></td>
+    <td><%= f.text_field :name, :class => "two_col_txt" %></td>
+</tr>
+<tr>
+    <td><%= f.label :date %></td>
+    <td><%= f.text_field :date, :class => "two_col_txt" %></td>
+</tr>
+<tr>
+    <td><%= f.label :organiser %></td>
+    <td><%= f.text_field :organiser, :class => "two_col_txt" %></td>
+</tr>
+<tr>
+    <td><%= f.label :venue %></td>
+    <td><%= f.text_field :venue, :class => "two_col_txt" %></td>
+</tr>
+<tr>
+    <td><%= f.label :logo %></td>
+    <td><%= f.file_field :avatar %></td>
+</tr>
+<tr>
+    <td colspan="2" align="middle"><br/><%= f.submit 'Save event' %></td>
+</tr>
+</table>
+
+<% end %>

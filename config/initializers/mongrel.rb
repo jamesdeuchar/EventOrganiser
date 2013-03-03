@@ -1,4 +1,4 @@
-if ['2.3.15'].include?(Rails.version) && Gem.available?('mongrel', '~>1.1.5') && self.class.const_defined?(:Mongrel)
+#if ['2.3.15'].include?(Rails.version) && Gem.available?('mongrel', '~>1.1.5') && self.class.const_defined?(:Mongrel)
   
   # Pulled right from latest rack. Old looked like this in 1.1.0 version.
   # 
@@ -79,4 +79,4 @@ if ['2.3.15'].include?(Rails.version) && Gem.available?('mongrel', '~>1.1.5') &&
     end
   end
   
-end
+#end

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130216080212) do
+ActiveRecord::Schema.define(:version => 20130227233347) do
 
   create_table "event_series", :force => true do |t|
     t.string   "series_name"
@@ -18,8 +18,17 @@ ActiveRecord::Schema.define(:version => 20130216080212) do
     t.datetime "updated_at"
   end
 
-  create_table "exhibitor_categories", :force => true do |t|
-    t.string   "category"
+  create_table "events", :force => true do |t|
+    t.string   "name"
+    t.datetime "date"
+    t.string   "venue"
+    t.string   "organiser"
+    t.integer  "logo_file_size"
+    t.string   "logo_content_type"
+    t.datetime "logo_updated_at"
+    t.string   "logo_file_name"
+    t.string   "created_by"
+    t.string   "updated_by"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

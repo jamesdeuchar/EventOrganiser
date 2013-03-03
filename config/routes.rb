@@ -3,6 +3,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :sessions
   map.resources :home, :only => [:index]
   map.resources :event_series
+  map.resources :events
   map.resources :exhibitors
 
   map.resources :admin, :only => [:index]
